@@ -10,15 +10,25 @@ export default function Carrito() {
       <div className="carrito">
         <div className="carrito-listadito">
           {carrito.map((item, i) => (
-            <ItemCarrito {...item} key={i} 
-            eliminarCarrito={eliminarCarrito}></ItemCarrito>
+            <ItemCarrito
+              {...item}
+              key={i}
+              eliminarCarrito={eliminarCarrito}
+            ></ItemCarrito>
           ))}
         </div>
         <div className="carrito-precio">
-          Total a pagar <br />
-          <strong>U$D 3400</strong>
+          <h5>Total a pagar:</h5>
+          <h1>
+            AR$
+            {carrito.reduce(function (accumulator, curValue) {
+              return accumulator + curValue.precio;
+            }, 0)}
+          </h1>
         </div>
       </div>
     </>
-  );
-}
+   
+   
+  ); 
+} 
