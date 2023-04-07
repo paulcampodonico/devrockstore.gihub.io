@@ -4,9 +4,11 @@ import "../assests/css/Home.css";
 import Item from "../components/Item";
 export default function Home() {
   const { listameProductos, productos } = useContext(Contexto);
-  console.log("prod", productos);
+ 
   useEffect(() => {
     listameProductos();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+
   }, []);
 
   return (

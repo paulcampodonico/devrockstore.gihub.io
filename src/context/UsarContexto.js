@@ -17,17 +17,17 @@ export default function UsarContexto(props) {
     );
 
     dispatch({ type: "LISTAME_PRODUCTOS", payload: res.data });
-    console.log(res.data, "desde UsarContexto()");
+   
   };
 
   const agregarCarrito = (item) => {
-    console.log("agregamos a carrito", item);
+   
     dispatch({ type: "AGREGAR_CARRITO", payload: item });
     
   };
 
   const eliminarCarrito = (item) => {
-    console.log("ELIMINAR_CARRITO", item);
+   
     dispatch({ type: "ELIMINAR_CARRITO", payload: item });
 
   };

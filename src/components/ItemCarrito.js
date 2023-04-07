@@ -5,7 +5,7 @@ import Borrar from "../assests/statics/borrar.png"
 
 export default function ItemCarrito (props) {
   const {nombre, precio, img, id} = props ;
-  console.log (props, "como vienen al item carrito")
+ 
   const handleBorrar = () => {
    props.eliminarCarrito(id); 
 }
