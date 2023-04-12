@@ -4,7 +4,7 @@ import ItemCarrito from "../components/ItemCarrito";
 import Contexto from "../context/Contexto";
 
 export default function Carrito() {
-  const { carrito, eliminarCarrito } = useContext(Contexto);
+  const { carrito } = useContext(Contexto);
   return (
     <>
       <div className="carrito">
@@ -13,7 +13,7 @@ export default function Carrito() {
             <ItemCarrito
               {...item}
               key={i}
-              eliminarCarrito={eliminarCarrito}
+             
             ></ItemCarrito>
           ))}
         </div>

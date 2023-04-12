@@ -20,7 +20,7 @@ export default function Reducer(state, action) {
     case ELIMINAR_CARRITO:
       return {
         ...state,
-        carrito: state.carrito.find((items) => items.id !== payload),
+        carrito: state.carrito.filter((items) => items.id !== payload),
       };
     default:
       return null;
